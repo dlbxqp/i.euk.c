@@ -1,0 +1,50 @@
+main > footer{
+ background-image: linear-gradient(to bottom right, rgba(10, 10, 10, 0.8), black);
+ color: rgba(255, 255, 255, 0.8)
+}
+
+main > footer > section{
+ display: flex; flex-wrap: wrap;
+ padding-top: 2vmax;
+ width: var(--width1); max-width: var(--max-width)
+}
+
+main > footer > section > div{
+ font-size: 0.8rem;
+ margin-bottom: 2vmax
+}
+main > footer > section > div:not(:last-of-type){
+ margin-right: 4vmax
+}
+
+main > footer div > div{
+ color: var(--color-main)
+}
+
+main > footer h3,
+main > footer li{
+ margin-bottom: 1vmax
+}
+main > footer h3{
+ color: var(--color-main); font-size: 1.8em;
+ white-space: nowrap
+}
+main > footer div:first-of-type h3{
+ background-color: var(--color-main);
+ border-radius: .2rem;
+ color: black;
+ padding: .4rem .6rem
+}
+
+main > footer a{
+ color: rgba(255, 255, 255, 0.72);
+ font-size: 1.6em;
+ text-decoration: none
+}
+main > footer a.active{
+ color: var(--color-main)
+}
+
+main > footer menu{
+ list-style-type: none
+}

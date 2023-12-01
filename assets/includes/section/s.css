@@ -1,0 +1,94 @@
+/* < submenu */
+#submenu{
+ background-color: var(--color-main);
+ color: rgba(0, 0, 0, 0.8); font-size: 1.4rem;
+ padding-top: 0;
+ width: 100%; max-width: 100%
+}
+#submenu > div{
+ display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+ padding: 1vmax 0
+}
+#submenu > div > div{
+ display: flex; flex-wrap: wrap
+}
+
+#submenu h2,
+#submenu a{
+ margin: 0;
+ padding-bottom: 0 !important
+}
+
+#submenu h2{
+ font-size: inherit;
+ flex-grow: 1; order: 0
+}
+
+#submenu a{
+ cursor: pointer;
+ display: flex; align-items: center;
+ font-size: 0.8em; font-weight: 200; text-decoration: none;
+ order: 1
+}
+#submenu a:hover{
+ color: white
+}
+
+
+
+@media all and (max-width: 690px){
+ #submenu > div{
+  flex-direction: column
+ }
+}
+
+@media all and (min-width: 420px){
+ #submenu a:not(:first-of-type)::before{
+  content: '/';
+
+  color: black !important;
+  margin: 0 1vmin
+ }
+}
+@media all and (max-width: 420px){
+ #submenu h2{
+  margin-bottom: 4px;
+ }
+
+ #submenu a{
+  border: 1px solid black; border-radius: 4px;
+  margin-bottom: 2px;
+  padding: 0 8px
+ }
+ #submenu a:hover{
+  border-color: white
+ }
+
+ #submenu a:not(:last-of-type){
+  margin-right: 2px
+ }
+ #submenu > div{
+  padding-bottom: calc(1vmax - 2px);
+ }
+}
+/* > submenu */
+
+
+#section_content.faq a,
+#section_content.docs a{
+ background-color: transparent;
+ border: 1px solid transparent;
+ display: flex; align-items: center;
+ text-decoration: none
+}
+#section_content.faq a:hover,
+#section_content.docs a:hover{
+ border-color: black
+}
+
+#section_content > p{
+ font-size: 1.8rem; font-weight: 600; text-transform: uppercase
+}
+#section_content > p > strong{
+ color: var(--color-main)
+}

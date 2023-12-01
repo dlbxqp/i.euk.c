@@ -1,0 +1,34 @@
+AddDefaultCharset UTF-8
+
+SSILegacyExprParser on
+
+AddType text/html .shtml
+
+DirectoryIndex index.shtml
+
+<IfModule mod_rewrite.c>
+ Options +FollowSymLinks
+ RewriteEngine On
+ RewriteBase /
+
+# HTTPS
+# RewriteCond %{ENV:HTTPS} !on
+# RewriteCond %{REQUEST_URI} !robots.txt
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# WWW
+ RewriteCond %{HTTP_HOST} ^www\.(.*)$
+ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+# /
+ RewriteCond %{REQUEST_URI} !(.*)/$
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_URI} !\..+$
+ RewriteRule ^(.*)$ $1/ [R=301,L]
+
+# spa
+ RewriteRule ^([\sA-Za-z0-9_]{2,22})/(.*)/(.*)/(.*)/$ /index.shtml?s=$1&ss=$2&sss=$3&ssss=$4 [L]
+ RewriteRule ^([\sA-Za-z0-9_]{2,22})/(.*)/(.*)/$ /index.shtml?s=$1&ss=$2&sss=$3 [L]
+ RewriteRule ^([\sA-Za-z0-9_]{2,22})/(.*)/$ /index.shtml?s=$1&ss=$3 [L]
+ RewriteRule ^([\sA-Za-z0-9_]{2,22})/$ /index.shtml?s=$1 [L]
+</IfModule>

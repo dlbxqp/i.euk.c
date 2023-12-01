@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#FFC814">
+  <meta name="publisher-URL" content="/">
+
+  <title></title>
+
+  <base href="/assets/">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/temp.css">
+
+<!--[if IE]>
+  <script>
+document.createElement('figcaption')
+document.createElement('template')
+document.createElement('article')
+document.createElement('section')
+document.createElement('header')
+document.createElement('figure')
+document.createElement('footer')
+document.createElement('output')
+document.createElement('aside')
+document.createElement('main')
+document.createElement('menu')
+document.createElement('nav')
+  </script>
+<![endif]-->
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+  <style>
+.pace-progress{
+ background-color: var(--color-yellow) !important;
+}
+  </style>
+  <script src="//cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <!-- + -->
+  <script src="//unpkg.com/imask"></script>
+ </head>
+
+ <body>
+  <main>
+   <section>
+    <p>Скоро здесь будет сайт</p>
+    <output></output>
+   </section>
+  </main>
+
+  <script>
+const host = document.location.host
+const link = document.createElement('a')
+link.href = `mailto://info@${host}`
+link.textContent = `info@${host}`
+
+document.querySelector('output').append(link)
+  </script>
+ </body>
+</html>

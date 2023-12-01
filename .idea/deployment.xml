@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="euk's" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc;.gitignore" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="au.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="cp.reg">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="dk.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="fs.reg">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="kh.reg">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="ks.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="nd.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="nm.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="np.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="ug.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="zhk.nic">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/.well-known" />
+            <excludedPath path="/assets/.unique" />
+            <excludedPath path="/robots.txt" />
+            <excludedPath path="/sitemap.xml" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

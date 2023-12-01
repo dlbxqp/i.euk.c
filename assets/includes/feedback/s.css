@@ -1,0 +1,109 @@
+main > form#feedback{
+ background-color: var(--color-main);
+/*
+ background: rgba(0, 0, 0, 0.04) url(/assets/includes/feedback/assets/images/bg.png) top center repeat-x; background-size: auto 100%;
+ background: transparent linear-gradient(to bottom, rgba(0, 0, 0, .04), rgba(0, 0, 0, .2));
+*/
+}
+
+main > form#feedback > section{
+ display: flex; flex-direction: column;
+ padding: 2vmax 0;
+ width: var(--width1); max-width: var(--max-width)
+}
+
+main > form#feedback > section > *:not(:last-child){
+ margin-bottom: 4px
+}
+
+
+main > form#feedback > section > div{
+ display: flex; justify-content: space-between
+}
+
+
+main > form#feedback #feedback__contacts > *{
+ width: calc( (100% - (4px * 2)) / 3)
+}
+
+main > form#feedback input,
+main > form#feedback textarea,
+main > form#feedback button{
+ border-radius: 4px;
+ padding: 1vmax;
+ transition: var(--transition)
+}
+
+
+main > form#feedback input,
+main > form#feedback textarea{
+ background-color: rgba(255, 255, 255, 0.88);
+ border: 1px solid rgba(10, 10, 10, 0.8)
+}
+
+main > form#feedback input:focus,
+main > form#feedback textarea:focus{
+ background-color: rgba(255, 255, 255, 0.96);
+ border-color: rgba(10, 10, 10, 0.8)
+}
+
+main > form#feedback input::placeholder,
+main > form#feedback textarea::placeholder{
+ color: rgba(0, 0, 0, 0.4)
+}
+
+
+main > form#feedback textarea{
+ min-height: 104px
+}
+
+
+main > form#feedback .feedback__checkboxes{
+ justify-content: flex-start; align-items: center;
+ margin-bottom: 8px
+}
+main > form#feedback .feedback__checkboxes > *{
+ width: auto !important;
+}
+main > form#feedback .feedback__checkboxes > label{
+ margin-right: 4px
+}
+main > form#feedback .feedback__checkboxes > p{
+ color: rgba(0, 0, 0, .8); font-size: .8em
+}
+
+
+main > form#feedback button{
+ border: 1px solid rgba(0, 0, 0, 0.8)
+}
+main > form#feedback button[disabled]{
+ background-color: transparent;
+ color: rgba(0, 0, 0, 0.6)
+}
+main > form#feedback button:not([disabled]){
+ background-color: rgba(0, 0, 0, 0.8);
+ color: white
+}
+main > form#feedback button:not([disabled]):hover{
+ background-color: var(--color-yellow);
+ color: rgba(10, 10, 10, 0.8)
+}
+
+.incorrectly{
+ border-color: red !important;
+ color: red !important
+}
+
+
+
+@media all and (max-width: 720px){
+ main > form#feedback #feedback__contacts{
+  flex-direction: column
+ }
+ main > form#feedback #feedback__contacts > *{
+  width: 100%
+ }
+ main > form#feedback #feedback__contacts > *:not(:last-child){
+  margin-bottom: 4px
+ }
+}

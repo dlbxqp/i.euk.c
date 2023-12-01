@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="df0e235e-091f-4c45-8c38-647a19fe66c3" name="nm.nic" url="https://new.uknm.ru">
+        <fileTransfer host="ftp.h213155195.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ced03020-09f4-46ee-b06d-1a6d8dd48b59" name="np.nic" url="https://uknp.ru">
+        <fileTransfer host="ftp.ukn4363576.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="7fa8414e-2bd5-4a70-92a6-2047d36cc3e3" name="dk.nic" url="https://dolina-komforta.ru">
+        <fileTransfer host="ftp.dol4149738.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0f7bc890-3042-4bc5-b864-03453d0617d9" name="zhk.nic" url="https://euk-zhk.ru/">
+        <fileTransfer host="ftp.euk4149422.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="859f44b6-bcd3-4e1d-b2eb-40f22186e203" name="kh.reg" url="https://kvartahome.ru/">
+        <fileTransfer host="31.31.196.206" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="bd499003-1b1a-4b49-9a40-136bd8a34abd" name="ug.nic" url="https://euk-uyutny-gorog.ru/">
+        <fileTransfer host="ftp.euk4149412.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="8dc2e921-0dc0-44f7-bfc3-f0cd5c98ba9a" name="ks.nic" url="https://euk-komfsreda.ru/">
+        <fileTransfer host="ftp.euk4357524.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="10a5ce5b-9709-4fca-8dda-e8741d428513" name="nd.nic" url="https://euk-nash-dom.ru/">
+        <fileTransfer host="ftp.h303982082.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="19a5c18a-fc0a-4a2d-9c16-36a5705593fb" name="au.nic" url="https://euk-atmosfera-uyuta.ru/">
+        <fileTransfer host="ftp.euk3996411.nichost.ru" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="b9c30b8e-2509-4faf-a9b8-23ce58250ada" name="cp.reg" url="https://comfort-point.ru/">
+        <fileTransfer host="31.31.198.49" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="f501ec2f-5094-4fc1-8b79-4739f7be453e" name="fs.reg" url="https://comfort-point.ru/">
+        <fileTransfer host="31.31.196.253" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>euk's</name>
+        <servers>
+          <name value="nm.nic" />
+          <name value="np.nic" />
+          <name value="dk.nic" />
+          <name value="zhk.nic" />
+          <name value="kh.reg" />
+          <name value="ug.nic" />
+          <name value="ks.nic" />
+          <name value="nd.nic" />
+          <name value="au.nic" />
+          <name value="cp.reg" />
+          <name value="fs.reg" />
+        </servers>
+      </group>
+    </groups>
+  </component>
+</project>

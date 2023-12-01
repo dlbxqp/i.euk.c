@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@font-face {
+ font-family: 'DrukTextWideCy';
+ font-weight: 500;
+ src: url(DrukTextWideCy_Medium.woff) format('woff'),
+      url(DrukTextWideCy_Medium.woff2) format('woff2'),
+      url(DrukTextWideCy_Medium.ttf) format('ttf'),
+      url(DrukTextWideCy_Medium.eot) format('eot');
+}

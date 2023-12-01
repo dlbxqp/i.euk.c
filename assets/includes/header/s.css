@@ -1,0 +1,151 @@
+header{
+ position: relative
+}
+header::after{
+ content: '';
+
+ background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), transparent);
+ position: absolute; top: 0; right: 0; left: 0; z-index: 1;
+ height: 100%
+}
+
+
+header > section{
+ color: white;
+ display: flex; justify-content: center; align-items: center; flex-direction: column;
+ position: static; z-index: 2
+}
+
+#header_hat,
+#header_operatingCompaniesMenu,
+#header_housingComplexesMenus{
+ width: var(--width1); max-width: var(--max-width)
+}
+
+
+#header_hat{
+ display: flex; justify-content: space-between;
+ padding: 2vmax 0
+}
+
+#header_hat > a:first-of-type{
+ display: flex; align-items: center
+}
+
+#header_hat > a:first-of-type > img{
+ margin-right: 1vw
+}
+
+#header_hat #header_hat_header{
+ display: flex; flex-direction: column;
+ font-size: 1.4rem; font-weight: 400
+}
+
+#header_hat h1{
+ font-size: 3.6rem; font-weight: 800;
+ margin-top: .6rem
+}
+
+/* < club */
+a#header_hat_club{
+ display: flex; align-items: center
+}
+a#header_hat_club:hover{
+ color: var(--color-main)
+}
+a#header_hat_club:hover path{
+ stroke: var(--color-main) !important
+}
+
+
+a#header_hat_club > svg{
+ padding-right: 1vw;
+ width: 3.2vmax; height: 3.2vmax
+}
+a#header_hat_club path{
+ transition: var(--transition)
+}
+
+
+a#header_hat_club > h4{
+ font-size: 1.4rem; font-weight: 400; line-height: 1.2
+}
+/* > club */
+
+header li{
+ white-space: nowrap
+}
+
+header a{
+ display: inline-block;
+ text-decoration: none
+}
+
+header li > a:not([class*="active"]):hover{
+ color: var(--color-main)
+}
+header li > a.active{
+ color: var(--color-main)
+}
+
+/* < main menu */
+header > section > nav{
+ border: 1px solid rgba(255, 255, 255, 0.6); border-right: none; border-left: none;
+ display: flex; justify-content: center;
+ padding: 1vmin 0;
+ width: 100%
+}
+
+#header_operatingCompaniesMenu{
+ display: flex; flex-wrap: wrap;
+ list-style-type: none
+}
+#header_operatingCompaniesMenu li{
+ margin-right: 2vmax
+}
+#header_operatingCompaniesMenu a{
+ font-size: 1.4rem; font-weight: 400;
+ padding-top: 10px; padding-bottom: 10px
+}
+/* > main menu */
+
+/* < sub menu */
+#header_housingComplexesMenus{
+ list-style-type: none;
+ display: flex; flex-wrap: wrap;
+ padding-top: 2vmax
+}
+
+#header_housingComplexesMenus > li{
+ margin-right: 2vmax; margin-bottom: 2vmin
+}
+
+#header_housingComplexesMenus h3{
+ border-bottom: 1px dotted var(--color-main);
+ font-family: Inter, sans-serif; font-size: 1.6rem; font-weight: 400;
+ margin-bottom: 4px;
+ padding: 0 4px 4px 4px
+}
+
+#header_housingComplexesMenus menu{
+ list-style-type: none
+}
+
+#header_housingComplexesMenus a{
+ font-size: 1.4rem; font-weight: 400;
+ padding-top: 6px; padding-bottom: 6px; padding-left: 6px
+}
+/* > sub menu */
+
+
+@media all and (max-width: 420px){
+ a#header_hat_club{
+  align-items: flex-end;
+ }
+ #header_hat h1{
+  font-size: 6vw;
+ }
+ a#header_hat_club h4{
+  display: none
+ }
+}

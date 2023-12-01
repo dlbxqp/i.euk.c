@@ -1,0 +1,112 @@
+@keyframes fade{
+ from{
+  opacity: 0.4
+ }
+ to{
+  opacity: 1
+ }
+}
+
+@keyframes width{
+ from{
+  width: 0
+ }
+ to{
+  width: 100%
+ }
+}
+
+
+#header-slider{
+ background-color: black;
+ overflow: hidden;
+ position: absolute; top: 0; right: 0; bottom: 0; left: 0
+}
+
+.header-slider_slide{
+ animation-name: fade; animation-duration: 2s;
+ display: none;
+ height: 100%
+}
+.header-slider_slide.active{
+ display: block
+}
+
+.header-slider_slide picture,
+.header-slider_slide picture > img{
+ width: 100%; height: 100%
+}
+.header-slider_slide picture{
+ display: block
+}
+.header-slider_slide picture > img{
+ object-fit: cover; object-position: center center
+}
+
+
+/* < Кнопки вперед и назад * /
+.header-slider_arrows{ display: none
+ /* криво работает - надо допиливать script * /
+}
+
+.header-slider_arrows > *{
+ color: white; font-weight: bold; font-size: 18px;
+ cursor: pointer;
+ padding: 16px;
+ position: absolute; top: calc(50% - ((18px + 16px) / 2)); z-index: 1;
+ transition: all 0.6s ease;
+ width: auto
+}
+.header-slider_arrows > *:hover{
+ background-color: rgba(0, 0, 0, 0.8)
+}
+.header-slider_arrows > *:first-child{
+ left: 0
+}
+.header-slider_arrows > *:last-child{
+ right: 0
+}
+/* > Кнопки вперед и назад */
+
+
+/* < dots * /
+.header-slider_dots{
+ display: none; /*flex;* /
+ position: absolute; bottom: 4vmax; right: 4vmax; left: 4vmax; z-index: 2;
+ max-width: 420px
+}
+
+.header-slider_dots > *{
+ background-color: rgba(255, 255, 255, 0.48);
+ border-radius: 20px;
+ cursor: pointer;
+ display: inline-block;
+ overflow: hidden;
+ position: relative;
+ width: calc(((100% - (20px * 3)) / 4)); height: 4px
+}
+.header-slider_dots > *:not(:last-child){
+ margin-right: 2vmin;
+}
+.header-slider_dots > *:hover{
+ background-color: white
+}
+
+.header-slider_dots > * > *{
+ background-color: white;
+ position: absolute; top: 0; bottom: 0; left: 0;
+ width: 0
+}
+.header-slider_dots > *.active > *{
+ animation-name: width; animation-duration: 6s; animation-timing-function: linear
+}
+/* > dots */
+
+
+/* < text * /
+.header-slider_slide > div{
+ color: white; font-size: 34px;
+ position: absolute; top: 50%; left: 50%;
+ transform: translate(-50%, -50%)
+}
+/* > text */

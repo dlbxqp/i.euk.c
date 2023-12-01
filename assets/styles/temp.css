@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+:root{
+ --color-yellow: rgb(255, 200, 20);
+ --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8)
+}
+
+html{
+ font-family: 'Arial Black', sans-serif; font-size: 10px;
+ /*hyphens: auto*/
+}
+
+body{
+ color: rgba(0, 0, 0, 0.4)
+}
+
+
+body > main{
+ display: flex; justify-content: center; align-items: center;
+ height: 100vh
+}
+
+body > main > section{
+ text-align: center
+}
+
+p,
+output{
+ white-space: nowrap;
+}
+p{
+ color: rgba(0, 0, 0, 0.2); font-size: 4.54vmin
+}
+output{
+ font-size: 6vmin
+}
+
+a{
+ text-decoration: none
+}
+a:hover{
+ color: rgba(0, 0, 0, 0.6)
+}
+
+
+@media all and (max-width: 320px){
+
+}

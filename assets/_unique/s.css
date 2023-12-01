@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+
+:root{
+ --color-main: rgb(255, 200, 20);
+ --color-main-alpha-80: rgba(255, 200, 10, .08);
+}
+
+
+#gosuslugi{
+ display: none
+}

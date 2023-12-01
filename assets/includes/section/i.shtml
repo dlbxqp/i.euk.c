@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="includes/section/s.css">
+
+<section id="section_content">
+ <img alt="loading" src="images/preloader.gif">
+</section>
+
+<script src="includes/section/s.js"></script>
+
+<!--#if expr="$QUERY_STRING=/ss/"-->
+<!--#include file="./subsection/i.html"-->
+<!--#endif-->

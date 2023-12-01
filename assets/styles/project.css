@@ -1,0 +1,452 @@
+@charset "utf-8";
+
+
+@import url(../fonts/Inter/s.css);
+@import url(../fonts/DrukTextWideCy/s.css);
+
+
+:root{
+    --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8);
+    --width1: 1140px;
+    --max-width: calc(100% - (10px * 2))
+}
+
+html{
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    /*hyphens: auto*/
+}
+
+body{
+    font-size: 1.6em
+}
+
+h1{
+    font-family: 'DrukTextWideCy', sans-serif;
+}
+
+body > main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+body > main > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+
+body > main > article{
+    flex-direction: column
+}
+
+section{
+    width: 100%
+}
+
+section > div > *:last-child{
+    margin-bottom: 0 !important
+}
+
+/* < body > main > article */
+body > main > article{
+    flex-grow: 1;
+    line-height: 1.5
+}
+
+body > main > article > section{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+body > main > article > section > h2,
+body > main > article > section > div{
+    width: var(--width1);
+    max-width: var(--max-width)
+}
+
+body > main > article h2{
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.6rem
+}
+
+body > main > article h3,
+body > main > article caption{
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 1rem
+}
+
+body > main > article caption{
+    background-color: var(--color-main);
+    padding: 1rem
+}
+
+body > main > article h6{
+    font-size: 1em;
+    margin-bottom: 1vmin;
+}
+
+body > main > article p{
+    margin-bottom: 1rem
+}
+
+
+body > main > article li.header{
+    font-size: 1.2em;
+    font-weight: 600;
+    list-style-type: none
+}
+
+body > main > article li + li{
+    margin-top: .8rem
+}
+
+
+#section_content,
+#subsection_content{
+    background-color: rgba(0, 0, 0, .04);
+    flex-grow: 1;
+    padding: 2vmax 0
+}
+
+#section_content a,
+#subsection_content a{
+    background-color: var(--color-main-alpha-80);
+    border-radius: 4px;
+    color: black; /* blue; */
+    display: inline-block;
+    margin-bottom: 1px;
+    padding: 2px 1vmin;
+    text-decoration: none
+}
+
+#section_content a:hover,
+#subsection_content a:hover{
+    background-color: var(--color-main);
+    color: black;
+}
+
+/* < pseudo */
+/*
+.pseudoselect{
+ margin-left: 1vmax
+}
+*/
+
+.pseudoselect > .pseudoselect__input{
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+.pseudoselect > .pseudoselect__list{
+    position: relative;
+    width: 100%
+}
+
+.pseudoselect > .pseudoselect__list > div{
+    border-top: 1px dashed rgba(0, 0, 0, .4);
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    transition: var(--transition)
+}
+
+.pseudoselect > .pseudoselect__list > div.active{
+    background-color: rgba(255, 255, 255, .92);
+    border-bottom: 1px solid var(--color-main);
+    height: auto
+}
+
+.pseudoselect > .pseudoselect__list > div > div{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 100%;
+    max-height: 20vmax
+}
+
+.pseudoselect > .pseudoselect__list > div > div > *{
+    cursor: pointer;
+    font-size: .8em;
+    line-height: 1.2;
+    padding: .8vmax;
+    transition: var(--transition)
+}
+
+.pseudoselect > .pseudoselect__list > div > div > *:hover{
+    background-color: rgb(255, 245, 220)
+}
+
+/* > pseudo */
+
+
+/* < about */
+#section_content.about ul,
+#section_content.about ol{
+    margin-bottom: 4vmax
+}
+
+#section_content.about ul li + li,
+#subsection_content.about ul li + li{
+    list-style-image: url(/assets/images/icons/ul-markers/tick.black.svg)
+}
+
+/* > about */
+
+/* < items */
+#section_content .items,
+#subsection_content .items{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 4px;
+    padding: 1vmax
+}
+
+#section_content .items:not(:last-child),
+#subsection_content .items:not(:last-child){
+    margin-bottom: 1vmax;
+    position: relative
+}
+
+#section_content .items time,
+#subsection_content .items time{
+    font-size: 0.8em
+}
+
+#section_content .items h3,
+#subsection_content .items h3{
+    line-height: 1.2;
+    text-transform: uppercase
+}
+
+/*
+#section_content .items > div,
+#subsection_content .items > div{
+ display: inline-flex; flex-direction: column
+}
+*/
+
+#section_content .items > div > a:first-letter{
+    text-transform: uppercase
+}
+
+
+#section_content .items img{
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: .4rem;
+    max-height: 600px;
+    margin: .2rem 0;
+    object-fit: cover;
+    object-position: center center
+}
+
+#section_content .items iframe{
+    margin: 1vh 0 0 0;
+    width: 100%
+}
+/* > items */
+
+/* < news */
+#section_content.news .items{
+    cursor: pointer
+}
+
+#section_content.news .items.active{
+    cursor: auto
+}
+
+#section_content.news .items h3{
+    font-weight: normal;
+    margin: 0
+}
+
+#section_content.news .items div{
+    color: transparent;
+    height: 0;
+    overflow-y: hidden;
+    transition: var(--transition)
+}
+
+#section_content.news .items.active div{
+    color: inherit;
+    height: auto
+}
+
+
+.news__documents,
+.news__images{
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    margin-top: 1vmax;
+    padding: 10px 0
+}
+
+.news__documents{
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+.news__documents a{
+    background-color: transparent !important;
+    border: 1px solid transparent; border-radius: 4px;
+    padding: 0 8px 4px 8px !important
+}
+.news__documents a:hover{
+    border-color: black;
+}
+/* > news */
+
+/* < contacts */
+#section_content.contacts > div > *:not(:last-child),
+#subsection_content.contacts > div > *:not(:last-child){
+    margin-bottom: 2vmax
+}
+
+#section_content.contacts p,
+#subsection_content.contacts p{
+    margin-bottom: 0 !important
+}
+
+#subsection_content.contacts > div > div > div:not(:last-child){
+    margin-bottom: 1vmax
+}
+
+
+#section_content.contacts > div > .address,
+#subsection_content.contacts > div > .address{
+    display: inline-block;
+    margin-bottom: 1vmin
+}
+
+/* > contacts */
+
+
+/* < tables */
+.tableWrapper{
+    overflow-x: auto;
+    margin-bottom: 2vmax
+}
+
+div.tableWrapper:not(:last-of-type){
+    margin-bottom: 4vh
+}
+
+body > main > article table{
+    border-collapse: separate;
+    border-spacing: 4px;
+    width: 100%
+}
+
+body > main > article caption{
+    white-space: nowrap
+}
+
+body > main > article caption{
+    text-align: left
+}
+
+
+body > main > article tr > *{
+    padding: .8rem
+}
+
+body > main > article tr > *:not(:last-of-type){
+    border-right: 4px solid transparent
+}
+
+body > main > article thead > tr > *{
+    background-color: rgba(0, 0, 0, .06)
+}
+
+body > main > article tbody > tr > *{
+    background-color: rgba(0, 0, 0, .02)
+}
+
+body > main > article tbody th{
+    background-color: rgba(0, 0, 0, .04);
+    text-align: left
+}
+
+
+/* 231003
+section.services tr{
+    display: flex
+}
+
+section.services tr > *:nth-child(2){
+    flex-grow: 1
+}
+*/
+/* > tables */
+/* > body > main > article */
+
+
+/* < multi-page */
+.multipage{
+    display: flex;
+    justify-content: center;
+    padding: .6vmax 0;
+    width: 100%
+}
+
+.multipage > *{
+    background-color: white;
+    border: 1px solid var(--color-main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1;
+    text-decoration: none;
+    width: 20px;
+    height: 20px
+}
+
+.multipage > *:not(:last-child){
+    margin-right: .4vmax
+}
+
+.multipage > *:hover{
+    background-color: var(--color-main-alpha-80)
+}
+
+.multipage > *.active{
+    background-color: var(--color-main)
+}
+
+/* > multi-page */
+
+
+#section_content.faq a::before,
+#section_content.docs a::before,
+.news__documents a::before{
+    content: attr(data-extension);
+
+    background-color: var(--color-main);
+    border-radius: 2px;
+    display: inline-flex; justify-content: center; align-items: center;
+    font-size: 1rem; font-weight: bold;
+    margin-right: 1vmax;
+    padding: 2px 6px 0 6px;
+    text-transform: uppercase;
+    width: 6vmax
+}
+
+
+
+@media all and (max-width: 320px){
+
+}
