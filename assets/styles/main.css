@@ -2,10 +2,9 @@
 
 
 :root{
- --transition: all 0.4s ease 0s;
+ --transition: all .4s ease 0s;
  --max-width: calc(100% - (10px * 2))
 }
-
 
 *,
 *::before,
@@ -20,7 +19,6 @@
 *::selection{
  background-color: rgba(255, 200, 10, 0.2)
 }
-
 
 body{
  min-height: 100vh;
@@ -57,7 +55,7 @@ button{
  transition: var(--transition)
 }
 button[disabled]{
- opacity: 0.6
+ opacity: .6
 }
 
 embed,

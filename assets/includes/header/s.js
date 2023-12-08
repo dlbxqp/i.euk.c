@@ -15,7 +15,7 @@ const operatingCompaniesMenu = document.querySelector('#header_operatingCompanie
 const housingComplexesMenus = document.querySelector('#header_housingComplexesMenus')
 const h1 = document.querySelector('h1')
 
-fetch(`${API}hat`, { //?code=\` + window.location.hostname
+fetch(`${API}hat/?code=` + window.location.hostname, {
  method: 'get'
 })
 .then((response) => {

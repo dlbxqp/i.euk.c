@@ -42,7 +42,7 @@ header > section{
 }
 
 #header_hat h1{
- font-size: 3.6rem; font-weight: 800;
+ font-size: clamp(3.6rem, 3.6rem, 6vw); font-weight: 800;
  margin-top: .6rem
 }
 
@@ -141,9 +141,6 @@ header > section > nav{
 @media all and (max-width: 420px){
  a#header_hat_club{
   align-items: flex-end;
- }
- #header_hat h1{
-  font-size: 6vw;
  }
  a#header_hat_club h4{
   display: none

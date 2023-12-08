@@ -12,13 +12,9 @@
     const a_v = v.split('=')
     oDLSearch[a_v[0]] = a_v[1];
     (a_v[0] === 'year') && (year = a_v[1])
-   })//; console.log('year', year)
-   fetch(`${API}information_disclosure/`, {
-    method: 'post',
-    body: JSON.stringify({
-     'operatingCompanyId': h1.dataset.id,
-     'year': year
-    }),
+   }); //console.log('year', year)
+   fetch(`${API}information_disclosure/?operatingCompanyId=${h1.dataset.id}&year=${year}`, {
+    method: 'get'
    })
    .then(response => response.json())
    .then((docs__response) => { //console.log('docs__response', docs__response)

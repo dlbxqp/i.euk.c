@@ -1,9 +1,7 @@
 @charset "utf-8";
 
-
 @import url(../fonts/Inter/s.css);
 @import url(../fonts/DrukTextWideCy/s.css);
-
 
 :root{
     --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8);

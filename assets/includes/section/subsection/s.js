@@ -13,13 +13,8 @@ window.subsectionContent = document.querySelector('#subsection_content')
     if(currentSubSubSection){
      clearInterval(sI)
 
-     fetch(`${API}tariffs/`, {
-      method: 'post',
-      body: JSON.stringify({
-       'houseId': currentSubSubSection,
-       'semester': currentSubSubSubSection,
-       'fields': ['id', 'title', 'description']
-      }),
+     fetch(`${API}tariffs/?houseId=${currentSubSubSection}&semester=${currentSubSubSubSection}&fields[]=id&fields[]=title&fields[]=description`, {
+      method: 'get'
      })
      .then(response => response.json())
      .then((tariffs__response) => { //console.log('tariffs', tariffs__response)
@@ -69,12 +64,8 @@ window.subsectionContent = document.querySelector('#subsection_content')
     if(currentSubSubSection){
      clearInterval(sI)
 
-     fetch(`${API}rso/`, {
-      method: 'post',
-      body: JSON.stringify({
-       'houseId': currentSubSubSection,
-       'fields': ['title', 'description']
-      }),
+     fetch(`${API}rso/?houseId=${currentSubSubSection}&fields[]=title&fields[]=description`, {
+      method: 'get'
      })
      .then(response => response.json())
      .then((rso__response) => { //console.log('rso__response', rso__response)

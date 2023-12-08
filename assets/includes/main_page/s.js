@@ -64,12 +64,8 @@ const sI = setInterval(() => {
 
 
         { //< answers
-            fetch(`${API}answers/`, {
-                method: 'post',
-                body: JSON.stringify({
-                    'operatingCompanyId': h1.dataset.id,
-                    'count': 6
-                }),
+            fetch(`${API}answers/?operatingCompanyId=${h1.dataset.id}&count=6`, {
+                method: 'get'
             })
                 .then(response => response.json())
                 .then((response) => { //console.log('answers', response)
@@ -101,12 +97,8 @@ const sI = setInterval(() => {
 
 
         { //< important to know
-            fetch(`${API}important_to_know/`, {
-                method: 'post',
-                body: JSON.stringify({
-                    'operatingCompanyId': h1.dataset.id,
-                    'count': 6
-                }),
+            fetch(`${API}important_to_know/?operatingCompanyId=${h1.dataset.id}&count=6`, {
+                method: 'get'
             })
                 .then(response => response.json())
                 .then((response) => { //console.log('important to know', response)
@@ -146,13 +138,8 @@ const sI = setInterval(() => {
 
         { //< information disclosure
             const d = new Date()
-            fetch(`${API}information_disclosure/`, {
-                method: 'post',
-                body: JSON.stringify({
-                    'operatingCompanyId': h1.dataset.id,
-                    'year': d.getFullYear(),
-                    'count': 6
-                }),
+            fetch(`${API}information_disclosure/?operatingCompanyId=${h1.dataset.id}&year=${d.getFullYear()}&count=6`, {
+                method: 'get'
             })
                 .then(response => response.json())
                 .then((response) => { //console.log('information disclosure', response.items)

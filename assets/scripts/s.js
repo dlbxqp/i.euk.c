@@ -1,3 +1,4 @@
+/* Отключено 231208 из-за проблем на firefox и safary. Для чего вообще использовался не ясно.
 {
  const viewport = document.querySelector('meta[name="viewport"]')
  //console.log('viewport', viewport)
@@ -6,6 +7,7 @@
   viewport.setAttribute('content', `width=${width}, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0`)
  }
 }
+*/
 
 
 //< contacts

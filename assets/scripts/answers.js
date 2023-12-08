@@ -3,11 +3,8 @@
   if( h1.dataset.id ){
    clearInterval(sI)
 
-   fetch(`${API}answers/`, {
-    method: 'post',
-    body: JSON.stringify({
-     'operatingCompanyId': h1.dataset.id
-    }),
+   fetch(`${API}answers/?operatingCompanyId=${h1.dataset.id}`, {
+    method: 'get'
    })
    .then(response => response.json())
    .then((answers__response) => { //console.log('answers__response', answers__response)

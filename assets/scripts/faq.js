@@ -3,11 +3,8 @@
   if( h1.dataset.id ){
    clearInterval(sI)
 
-   fetch(`${API}important_to_know/`, {
-    method: 'post',
-    body: JSON.stringify({
-     'operatingCompanyId': h1.dataset.id
-    }),
+   fetch(`${API}important_to_know/?operatingCompanyId=${h1.dataset.id}`, {
+    method: 'get'
    })
    .then(response => response.json())
    .then((important_to_know__response) => { //console.log('important_to_know__response', important_to_know__response)
