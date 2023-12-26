@@ -46,12 +46,8 @@ window.sectionContent = document.querySelector('#section_content')
 
   } else{
 
-   fetch(`${API}housing_complexes/`, {
-    method: 'post',
-    body: JSON.stringify({
-     'code': currentSection,
-     'fields': ['id', 'title', 'text']
-    }),
+   fetch(`${API}housing_complexes/?code=${currentSection}&fields[]=id&fields[]=title&fields[]=text`, {
+    method: 'get'
    })
    .then(response => response.json())
    .then((housing_complex__response) => { //console.log('housing_complex__response', housing_complex__response.data)

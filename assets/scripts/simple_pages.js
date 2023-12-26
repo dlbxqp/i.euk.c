@@ -3,13 +3,8 @@
   if( h1.dataset.id ){
    clearInterval(sI)
 
-   fetch(`${API}simple_pages/`, {
-    method: 'post',
-    body: JSON.stringify({
-     'operatingCompanyId': h1.dataset.id,
-     'code': currentSection,
-     'fields': ['header', 'text']
-    }),
+   fetch(`${API}simple_pages/?operatingCompanyId=${h1.dataset.id}&code=${currentSection}&fields[]=header&fields[]=text`, {
+    method: 'get'
    })
    .then(response => response.json() )
    .then((simple_page__response) => { //console.log('simple_page__response', simple_page__response)

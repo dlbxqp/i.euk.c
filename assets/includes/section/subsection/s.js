@@ -92,13 +92,8 @@ window.subsectionContent = document.querySelector('#subsection_content')
 
   } else { //< simple page
 
-   fetch(`${API}simple_pages/`, {
-    method: 'post',
-    body: JSON.stringify({
-     'housingComplexId': sectionContent.dataset.housingComplexId,
-     'code': currentSubSection,
-     'fields': ['header', 'text']
-    }),
+   fetch(`${API}simple_pages/?housingComplexId=${sectionContent.dataset.housingComplexId}&code=${currentSubSection}&fields[]=header&fields[]=text`, {
+    method: 'get'
    })
    .then(response => response.json())
    .then((simple_page__response) => { //console.log('simple_page__response', simple_page__response)
