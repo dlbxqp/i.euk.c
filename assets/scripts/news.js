@@ -4,7 +4,8 @@
             clearInterval(sI)
 
             let url = `${API}news/?operatingCompanyId=${h1.dataset.id}`;
-            (URL.searchParams.has('page')) && (url += '&page=' + URL.searchParams.get('page'))
+            URL.searchParams.has('page') && (url += '&page=' + URL.searchParams.get('page'))
+
             fetch(url, {
                 method: 'get'
             })
@@ -14,30 +15,6 @@
 
                     sectionContent.classList.add('news')
                     sectionContent.innerHTML = ''
-
-/* Нет смысла поскольку сортирует не все новости, а те что на текущей странице (в многостраничке)
-                    //< sort
-                    const byField = (field) => (a, b) => {
-                        if(field === 'date'){
-                            const formatDate = (date) => {
-                                if(!date){
-                                    return false
-                                }
-
-                                const a_date = date.split(' ')
-                                const a__date = a_date[0].split('.')
-
-                                return `${a__date[2]}${a__date[1]}${a__date[0]}`
-                            }
-
-                            //console.log(formatDate(a[field]), formatDate(b[field]))
-
-                            return (formatDate(a[field]) < formatDate(b[field]) ? 1 : -1)
-                        }
-                    }
-                    items.sort(byField('date'))
-                    //> sort
-*/
 
                     items.forEach((v) => { //console.log('v (items)', v)
                         const wrapper = document.createElement('div')
@@ -98,9 +75,14 @@
 
                             URL.searchParams.set('page', i)
                             link.href = `${URL}`
-                            link.textContent = `${i}`;
+                            link.textContent = `${i}`
+                            link.rel = 'alternate'
 
-                            (page === i) && link.classList.add('active')
+                            if(page === i){
+                                link.classList.add('active')
+
+                                setPageTitle(`${page} страница из ${pages}`)
+                            }
 
                             div.append(link)
                         }

@@ -1,15 +1,3 @@
-/* Отключено 231208 из-за проблем на firefox и safary. Для чего вообще использовался не ясно.
-{
- const viewport = document.querySelector('meta[name="viewport"]')
- //console.log('viewport', viewport)
- const width = 420
- if(screen.width < width){ //console.log('screen.width', screen.width)
-  viewport.setAttribute('content', `width=${width}, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0`)
- }
-}
-*/
-
-
 //< contacts
 if([currentSection, currentSubSection].includes('contacts')){
  const script = document.createElement('script')

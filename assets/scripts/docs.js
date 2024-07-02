@@ -1,27 +1,25 @@
 {
  const sI = setInterval(() => {
-  if( h1.dataset.id ){
+  if(h1 && h1.dataset && h1.dataset.id){
    clearInterval(sI)
 
-   const date = new Date();
-   //
-   const a_DLSearch = document.location.search.substr(1).split('&')//; console.log('a_DLSearch', a_DLSearch)
-   let oDLSearch = {}
-   let year = date.getFullYear()
-   a_DLSearch.forEach((v) => {
-    const a_v = v.split('=')
-    oDLSearch[a_v[0]] = a_v[1];
-    (a_v[0] === 'year') && (year = a_v[1])
-   }); //console.log('year', year)
+   const date = new Date()
+   let year = date.getFullYear();
+
+   URL.searchParams.has('year') && (year = URL.searchParams.get('year'))
+
    fetch(`${API}information_disclosure/?operatingCompanyId=${h1.dataset.id}&year=${year}`, {
     method: 'get'
    })
    .then(response => response.json())
    .then((docs__response) => { //console.log('docs__response', docs__response)
+    setPageTitle(`${year} год`)
+
     const section = document.createElement('section')
     section.id = 'submenu'
     const div = document.createElement('div')
 
+    let oDLSearch = {}
     const linksWrapper = document.createElement('div')
     div.append(linksWrapper)
     for(let k in docs__response.counts){ //console.log(k, year)
@@ -74,13 +72,15 @@
       wrapper.append(title)
       //
       const documents = document.createElement('div')
-      v.documents.forEach((vv) => {
-       const link = document.createElement('a')
-       link.href = UPLOAD + vv.src
-       link.download = `${vv['file name']}.${vv['extension']}` //link.target = '_blank'
-       link.textContent = vv['file name']
-       link.dataset.extension = vv['extension']
-       documents.append(link)
+      v.documents.forEach((vv) => { //console.log(`vv['file name'].length`, vv['file name'].length)
+       if(vv['file name'].length > 0){
+        const link = document.createElement('a')
+        link.href = UPLOAD + vv.src
+        link.download = `${vv['file name']}.${vv['extension']}` //link.target = '_blank'
+        link.textContent = vv['file name']
+        link.dataset.extension = vv['extension']
+        documents.append(link)
+       }
       })
       wrapper.append(documents)
 

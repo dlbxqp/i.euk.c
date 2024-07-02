@@ -27,7 +27,7 @@ fetch(`${API}hat/?code=` + window.location.hostname, {
   return response.json()
  }
 })
-.then((operating_company__response) => { //console.log('hat', operating_company__response)
+.then((operating_company__response) => { //onsole.log('hat', operating_company__response)
  const operatingCompanyId = Object.keys(operating_company__response)[0]
  const operatingCompany = operating_company__response[ operatingCompanyId ]
 
@@ -128,7 +128,9 @@ fetch(`${API}hat/?code=` + window.location.hostname, {
       !currentSubSubSection && (currentSubSubSection = kkk)
 
       if(kkk*1 === currentSubSubSection*1){
-       housesPseudoSelect.querySelector('.pseudoselect__input').innerText = operatingCompany['housing complexes'][k].menu[kk].menu[kkk].title
+       const currentHouse = operatingCompany['housing complexes'][k].menu[kk].menu[kkk].title
+       housesPseudoSelect.querySelector('.pseudoselect__input').innerText = currentHouse
+       setPageTitle(currentHouse)
 
        //< halfyears pseudoselect
        operatingCompany['housing complexes'][k].menu[kk].menu[kkk].menu.forEach((halfyear) => {
@@ -137,7 +139,10 @@ fetch(`${API}hat/?code=` + window.location.hostname, {
         const pseudoselectTitle = halfyear.replace(/\d/g, '').toUpperCase() + ' полугодие ' + halfyear.replace(/\D/g, '')
 
         if(halfyear === currentSubSubSubSection){
-         (halfyearsPseudoSelect.querySelector('.pseudoselect__input').innerText === '') && (halfyearsPseudoSelect.querySelector('.pseudoselect__input').innerText = pseudoselectTitle)
+         if(halfyearsPseudoSelect.querySelector('.pseudoselect__input').innerText === '') {
+          halfyearsPseudoSelect.querySelector('.pseudoselect__input').innerText = pseudoselectTitle
+          setPageTitle(pseudoselectTitle)
+         }
         } else if(!halfyearsPseudoSelect.querySelector(`.pseudoselect__list > div > div > div[data-id="${halfyear}"]`)){
          const option = document.createElement('div')
          option.innerText = pseudoselectTitle
@@ -237,7 +242,9 @@ fetch(`${API}hat/?code=` + window.location.hostname, {
       !currentSubSubSection && (currentSubSubSection = kkk)
 
       if(kkk*1 === currentSubSubSection*1){
-       housesPseudoSelect.querySelector('.pseudoselect__input').innerText = operatingCompany['housing complexes'][k].menu[kk].menu[kkk].title
+       const currentHouse = operatingCompany['housing complexes'][k].menu[kk].menu[kkk].title
+       housesPseudoSelect.querySelector('.pseudoselect__input').innerText = currentHouse
+       setPageTitle(currentHouse)
       } else{
        const option = document.createElement('div')
        option.innerText = operatingCompany['housing complexes'][k]['menu'][kk]['menu'][kkk].title
@@ -296,6 +303,7 @@ function createMenuItem(menu, aItem, key, isActive = false){
  const link = document.createElement('a')
  link.textContent = aItem[0]
  link.href = `/${aItem[1]}`
+ link.rel = 'canonical'
 
  if(isActive){
   link.classList.add('active')
@@ -326,11 +334,31 @@ function createPseudoSelect(title = ''){ //console.log('title', title)
  return select
 }
 
-function setPageTitle(header){
+function setPageTitle(header, MD, MK){
  if(document.title !== ''){
   document.title += ` / ${header}`
  } else{
   document.title = header
+ }
+
+ if(
+     MD
+     && (
+         !document.querySelector('meta[name="description"]')
+         || document.querySelector('meta[name="description"]').content === ''
+     )
+ ){
+  document.querySelector('meta[name="description"]').content = MD
+ }
+
+ if(
+     MK
+     && (
+         !document.querySelector('meta[name="keywords"]')
+         || document.querySelector('meta[name="keywords"]').content === ''
+     )
+ ){
+  document.querySelector('meta[name="keywords"]').content = MK
  }
 }
 

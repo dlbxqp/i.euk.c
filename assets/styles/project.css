@@ -2,6 +2,7 @@
 
 @import url(../fonts/Inter/s.css);
 @import url(../fonts/DrukTextWideCy/s.css);
+@import url(../fonts/Fontello/css/fontello.css);
 
 :root{
     --text-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.8);
@@ -11,8 +12,7 @@
 
 html{
     font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    /*hyphens: auto*/
+    font-size: 10px
 }
 
 body{
@@ -20,7 +20,7 @@ body{
 }
 
 h1{
-    font-family: 'DrukTextWideCy', sans-serif;
+    font-family: 'DrukTextWideCy', sans-serif
 }
 
 body > main{
@@ -89,7 +89,7 @@ body > main > article caption{
 
 body > main > article h6{
     font-size: 1em;
-    margin-bottom: 1vmin;
+    margin-bottom: 1vmin
 }
 
 body > main > article p{
@@ -129,7 +129,7 @@ body > main > article li + li{
 #section_content a:hover,
 #subsection_content a:hover{
     background-color: var(--color-main);
-    color: black;
+    color: black
 }
 
 /* < pseudo */
@@ -220,7 +220,7 @@ body > main > article li + li{
 
 #section_content .items time,
 #subsection_content .items time{
-    font-size: 0.8em
+    font-size: .8em
 }
 
 #section_content .items h3,
@@ -301,7 +301,7 @@ body > main > article li + li{
     padding: 0 8px 4px 8px !important
 }
 .news__documents a:hover{
-    border-color: black;
+    border-color: black
 }
 /* > news */
 
@@ -326,7 +326,6 @@ body > main > article li + li{
     display: inline-block;
     margin-bottom: 1vmin
 }
-
 /* > contacts */
 
 
@@ -424,7 +423,6 @@ section.services tr > *:nth-child(2){
 .multipage > *.active{
     background-color: var(--color-main)
 }
-
 /* > multi-page */
 
 
