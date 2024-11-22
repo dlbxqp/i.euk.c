@@ -27,7 +27,7 @@ fetch(`${API}hat/?code=` + window.location.hostname, {
   return response.json()
  }
 })
-.then((operating_company__response) => { //onsole.log('hat', operating_company__response)
+.then((operating_company__response) => { //console.log('hat', operating_company__response)
  const operatingCompanyId = Object.keys(operating_company__response)[0]
  const operatingCompany = operating_company__response[ operatingCompanyId ]
 

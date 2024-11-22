@@ -1,10 +1,10 @@
-//< contacts
+/*/< contacts
 if([currentSection, currentSubSection].includes('contacts')){
  const script = document.createElement('script')
  script.src = 'scripts/contacts.js'
  document.querySelector('body').appendChild(script)
 }
-//> contacts
+*///> contacts
 
 
 //< wrappers
